@@ -1,0 +1,204 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-attachment:fixed;
+    font-family: 'Roboto', sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (orientation landscape) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  background-color:#16A085;
+  z-index: 1;
+}
+
+#header h1 {
+  color: white;
+  margin-top: 2%;
+  font-size: 1.8rem;
+}
+
+#side_buttons {
+  z-index:0;
+  position: absolute;
+  margin-top: 10vh;
+  width: 25vw;
+  height: 100vh;
+}
+
+.button {
+  font-family: 'Roboto', sans-serif;
+  background-color:#599bb3;
+	font-size: 2rem;
+	text-decoration:none;
+  display: block;
+  width: 25vw;
+  height: 9vh;
+  padding: 0;
+  border: none;
+  color: white;
+}
+
+#button1 {
+  background-color:#599bb3;
+}
+#button2 {
+  background-color:#117A65;
+}
+#button3 {
+  background-color: #AF7AC5;
+}
+#button4 {
+  background-color: #7D3C98;
+}
+#button5 {
+  background-color: #F4D03F;
+}
+#button6 {
+  background-color: #F39C12;
+}
+#button7 {
+  background-color: #E74C3C;
+}
+
+#words {
+  position: absolute;
+  background-color: #E5E7E9;
+  width: 25vw;
+  height: 30vh;
+  display: block;
+  border: none;
+  padding: 0;
+}
+
+#thanks_button {
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10%;
+  position: relative;
+  outline: none;
+  border: none;
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 30px;
+  background-color: #34495E;
+  color: white;
+}
+
+.greetings {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5%;
+}
+.small_button {
+  margin: 0 auto;
+  background-color: #34495E;
+  color: white;
+  border: none;
+  font-size: 28px;
+}
+
+#page_content {
+  position: fixed;
+  width: 85vw;
+  top: 10vw;
+  left:25vh;
+  text-align: center;
+}
+
+#nurse_icon {
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+#welcome {
+
+  font-family: 'Courgette', cursive;
+  margin: 5%;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #16A085;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/rmcontrol.css"/>
+    <title>Pain</title>
+</head>
+
+<body>
+    <div id = "header">
+      <h1 aria-hidden="true"> NYUICUPICU </h1>
+    </div>
+    <div id = "side_buttons">
+      <button type = "button" class = "button" id = "button1" onclick='speak("call nurse")'>Call Nurse</button>
+      <button type = "button" class = "button" id = "button2" onclick="location.href = 'pain.html'">Pain</button>
+      <button type = "button" class = "button" id = "button3">Medical Needs</button>
+      <button type = "button" class = "button" id = "button4">Feelings</button>
+      <button type = "button" class = "button" id = "button5">Room Control</button>
+      <button type = "button" class = "button" id = "button6">My Things</button>
+      <button type = "button" class = "button" id = "button7">Move Me</button>
+      <div id = "words">
+        <button type="button" id = "thanks_button" onclick='speak("thank you")'> Thank you </button>
+        <div class = "greetings">
+          <button type="button" class = "small_button" onclick='speak("no")'> No </button>
+          <button type="button" class = "small_button" onclick='speak("yes")'> Yes </button>
+        </div>
+        <div class = "greetings">
+          <button type="button" class = "small_button" onclick='speak("hi")'> Hi </button>
+          <button type="button" class = "small_button" onclick='speak("bye")'> Bye </button>
+        </div>
+      </div>
+    </div>
+    <div id = "page_content">
+      <div id = "rmcontrol_buttons">
+        <button type="button" class="cont_button" id = "light">Lights</button>
+        <button type="button" class="cont_button" id = "blinds">Blinds</button>
+        <button type="button" class="cont_button" id = "bed">Bed</button>
+        <button type="button" class="cont_button" id = "TV">TV On/Off</button>
+        <button type="button" class="cont_button" id = "TVforward">TV Forward</button>
+        <button type="button" class="cont_button" id = "TVback">TV Back</button>
+        <button type="button" class="cont_button" id = "TVvolUp">TV Vol Up</button>
+        <button type="button" class="cont_button" id = "TVvolDwn">TV Vol Down</button>
+        <button type="button" class="cont_button" id = "lamp">Lamp</button>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    <script type="text/javascript" src="../js/websocket.js"></script>
+
+</body>
+
+</html>
