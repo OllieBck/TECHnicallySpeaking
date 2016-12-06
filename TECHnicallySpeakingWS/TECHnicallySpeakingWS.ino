@@ -22,27 +22,8 @@
 #include <ArduinoHttpClient.h>
 #include "config.h"
 
-/* //for DigitalOcean
-  char serverAddress[] = "job271.itp.io";
-  int port = 9876;
-*/
-
-  // or
-  IPAddress server(159,203,190,133);       // address of the server
-  int port = 9111; //change back to 9876
-
-
-
-/*
-  // for PhoneGap
-  char serverAddress[] = "192.168.1.3";
-  int port = 3000;
-*/
-
- /*
-IPAddress server(192, 168, 1, 3);    // address of the server
-int port = 3000;
-*/
+IPAddress server(192,168,1,2);       // address of the server
+int port = 9111; //change back to 9876
 
 WiFiClient wifi;                // instance of the WIFi client library
 WebSocketClient client = WebSocketClient(wifi, server, port);
@@ -83,19 +64,8 @@ void setup() {
 void loop() {
   client.begin();
   while (client.connected()) {
-    /*
     //Serial.print("connected");
-    if (digitalRead(connectButton) == LOW) {
-      Serial.println("press");
-      //client.begin();
-      delay(50);
-
-      // send a hello #
-      client.beginMessage(TYPE_TEXT);
-      client.print("on");
-      client.endMessage();
-    }
-  */
+    
     messageRec();
 
     delay(100);
