@@ -43,8 +43,7 @@ void setup() {
     delay(100);
   }
 
-  //webSocket.begin("job271.itp.io", 9111);
-  webSocket.begin("192.168.1.7", 9111);
+  webSocket.begin("192.168.1.2", 9111);
   //webSocket.setAuthorization("user", "Password"); // HTTP Basic Authorization
   webSocket.onEvent(webSocketEvent);
 
